@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navbar{
+
+    z-index: 1000;
+}
+.hero-content{
+    margin-top: 50px;
+}
+
+.hero-content img{
+    max-width: 300px;
+}
+
+.btne {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 260px;
+    height: 60px;
+    line-height: 60px;
+    color: #041020;
+    border: 0;
+    text-align: center;
+    margin: 0;
+    background-color: #9e36ff;
+    padding: 0 35px;
+    transition: all .3s;
+    border-radius: 30px;
+}
+
+@keyframes tracking-in-expand-fwd-top {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+@keyframes tracking-in-expand-fwd-bot {
+    0% {
+      letter-spacing: -0.5em;
+      transform: translateY(0px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(500);
+      opacity: 1;
+    }
+  }
+  .cd-words-wrapper{
+    position:static;
+    width: 100% !important;
+    overflow: hidden;
+    height: 20px;
+    width: 200px;
+  }
+  .hero{
+    background-image: url('../images/fundo.png');
+    background-size: 50% 80%;
+    background-repeat: no-repeat;
+    background-position: 10% 100%;
+  }
+
+  @media screen and (max-width : 1025px) {
+    .hero{
+        background-image: url('') !important;
+        background-size: 50% 80%;
+        background-repeat: no-repeat;
+        background-position: 10% 100%;
+      }
+  }
+.is-visible{
+    display: block;
+    animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    transition: 0.3s all linear;
+    font-size: 60px;
+    overflow: hidden;
+    width: 100%;
+}
+.is-hidden{
+    display: none;
+    animation: tracking-in-expand-fwd-bot 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    transition: 0.3s all linear;
+    font-size: 60px;
+    width: 100%;
+    transform: translateY(100px);
+}
+.btne:before {
+    content: '';
+    position: absolute;
+    border: #9e36ff solid 3px;
+    border-radius: 40px;
+    transition: all .3s;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation-duration: 1s;
+}
+.hero{
+    color: white;
+    background-color: #041020;
+}
+.title-common {
+    font-size: 60px;
+    color: #ae81d8;
+    font-weight: 700;
+}
+
+.bg-muda{
+    background-color: #041020;
+    color: white;
+    transition: 0.2s all linear;
+    width: 100%;
+}
+
+.bg-base-100{
+    width: 100%;
+    transition: 0.2s all linear;
+    position: fixed;
+}
